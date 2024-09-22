@@ -1,0 +1,72 @@
+.container {
+  width: 120rem;
+  background-color: #fff;
+  margin: 8rem auto;
+  box-shadow: var(--shadow-dark);
+
+  @include respond(laptop) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.header {
+  background-color: var(--color-grey-light-1);
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-3);
+
+  &__logo-box {
+    width: 5rem;
+    margin-left: 2rem;
+
+    @include respond(phone-small) {
+      margin-left: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__logo {
+    width: 100%;
+  }
+}
+
+.content {
+  display: flex;
+
+  @include respond(tab-land) {
+    flex-direction: column;
+  }
+}
+
+.navigation {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-view {
+  flex: 1;
+}
+
+.main-box {
+  background-color: var(--color-grey-light-2);
+  padding: 5rem 5rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  flex: 0 0 35%;
+}
